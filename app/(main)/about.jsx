@@ -1,5 +1,5 @@
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router'
-import { View, Text } from 'react-native'
+import { useLocalSearchParams, useRouter } from 'expo-router'
+import { Text, View } from 'react-native'
 
 export default function AboutScreen() {
   const router = useRouter()
@@ -17,3 +17,4 @@ export default function AboutScreen() {
     </View>
   )
 }
+

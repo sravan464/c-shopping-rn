@@ -10,7 +10,7 @@ const SmilarProductsSlider = props => {
   //? Render(s)
   return (
     <View className="px-3 py-4 overflow-hidden">
-      <Text className="mb-3 w-24">{smilarProducts.title}</Text>
+      <Text className="mb-3 w-24">{smilarProducts.title || 'Similar Products'}</Text>
       <FlashList
         data={smilarProducts?.products || []}
         renderItem={({ item, index }) => (
@@ -26,3 +26,4 @@ const SmilarProductsSlider = props => {
 }
 
 export default SmilarProductsSlider
+

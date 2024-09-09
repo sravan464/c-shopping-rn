@@ -1,12 +1,12 @@
 import { Link } from 'expo-router'
 import { Pressable, Text, View } from 'react-native'
 
+import Icons from '../common/Icons'
+import ResponsiveImage from '../common/ResponsiveImage'
 import Depot from './Depot'
 import DiscountProduct from './DiscountProduct'
 import ProductPrice from './ProductPrice'
 import SpecialSell from './SpecialSell'
-import Icons from '../common/Icons'
-import ResponsiveImage from '../common/ResponsiveImage'
 
 import { truncate } from '@/utils'
 
@@ -74,7 +74,7 @@ const ProductCard = props => {
                   price={product.price}
                 />
               ) : (
-                <Text className="h-12 my-0.5">不可用</Text>
+                <Text className="h-12 my-0.5">Unavailable</Text>
               )}
             </View>
           </View>
@@ -85,3 +85,4 @@ const ProductCard = props => {
 }
 
 export default ProductCard
+

@@ -1,24 +1,24 @@
 module.exports = {
-  //前头函数只有一个參数的时候可以忽略括号
+  // Omit parentheses when arrow function has only one parameter
   arrowParens: 'avoid',
-  //括号内部不要出现空格
+  // Do not add spaces inside brackets
   bracketSpacing: true,
-  //行结東符使用Unix格式
+  // Use Unix line endings
   endOfLine: 'lf',
-  //true:Put>onthelastLineinsteadofatanewline
+  // Put > on the last line instead of on a new line
   jsxBracketSameLine: false,
-  //行宽
+  // Line width
   printWidth: 100,
-  //换行方式
+  // Preserve line breaks
   proseWrap: 'preserve',
-  //分号
+  // Semicolons
   semi: false,
-  //使用单引号
+  // Use single quotes
   singleQuote: true,
-  //缩进
+  // Indentation
   tabWidth: 2,
-  //使甩tab缩进
+  // Use spaces for indentation
   useTabs: false,
-  //后夏迎号，多行对象、数组在最后一行增加逗号
+  // Trailing commas for multiline objects and arrays
   trailingComma: 'es5',
 }

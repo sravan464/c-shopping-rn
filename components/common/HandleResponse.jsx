@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import Toast from 'react-native-toast-message'
 
 export default function HandleResponse(props) {
-  //? Porps
+  //? Props
   const { isSuccess, isError, error, message, onSuccess, onError } = props
 
   //? Re-Renders
@@ -26,3 +26,4 @@ export default function HandleResponse(props) {
 
   return null
 }
+

@@ -19,17 +19,16 @@ const SelectColor = props => {
   return (
     <View className="">
       <View className="flex flex-row justify-between p-4">
-        <Text className="text-sm text-gray-700">颜色: {tempColor?.name}</Text>
-        <Text className="text-sm">{colors.length} 种颜色</Text>
+        <Text className="text-sm text-gray-700">Color: {tempColor?.name}</Text>
+        <Text className="text-sm">{colors.length} colors</Text>
       </View>
       <View className="flex flex-row flex-wrap gap-3 px-5 my-3">
         {colors.map(item => (
           <Pressable
             key={item.id}
             onPress={() => dispatch(setTempColor(item))}
-            className={`rounded-full py-1 px-1.5 flex gap-x-2 flex-row items-center cursor-pointer ${
-              tempColor?.id === item.id ? 'border-2 border-sky-500' : ' border-2 border-gray-300'
-            }`}
+            className={`rounded-full py-1 px-1.5 flex gap-x-2 flex-row items-center cursor-pointer ${tempColor?.id === item.id ? 'border-2 border-sky-500' : ' border-2 border-gray-300'
+              }`}
           >
             <View
               className="w-5 h-5 shadow-2xl rounded-full flex items-center justify-center"
@@ -39,13 +38,12 @@ const SelectColor = props => {
                 <Icons.AntDesign
                   size={16}
                   name="checkcircleo"
-                  className={`${
-                    item.hashCode === '#ffffff'
+                  className={`${item.hashCode === '#ffffff'
                       ? 'text-gray-600'
                       : item.hashCode === '#000000'
                         ? 'text-gray-200'
                         : 'text-white'
-                  } `}
+                    } `}
                 />
               )}
             </View>
@@ -59,3 +57,4 @@ const SelectColor = props => {
 }
 
 export default SelectColor
+

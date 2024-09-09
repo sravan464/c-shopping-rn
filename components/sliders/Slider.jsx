@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
 import Swiper from 'react-native-swiper'
 
 export default function Slider(props) {
@@ -9,7 +9,7 @@ export default function Slider(props) {
   if (data?.length === 0) return null
 
   return (
-    <View className="mt-3 rounded-lg overflow-hidden">
+    <View style={styles.container}>
       <Swiper style={styles.wrapper} showsPagination activeDotColor="#1D4ED8" dotColor="#E5E7EB">
         {data
           .filter(item => item.isPublic)
@@ -19,7 +19,7 @@ export default function Slider(props) {
               source={{
                 uri: item.image.url,
               }}
-              className="w-full h-full"
+              style={styles.image}
             />
           ))}
       </Swiper>
@@ -28,7 +28,17 @@ export default function Slider(props) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginTop: 12,
+    borderRadius: 8,
+    overflow: 'hidden',
+  },
   wrapper: {
     height: 200,
   },
+  image: {
+    width: '100%',
+    height: '100%',
+  },
 })
+

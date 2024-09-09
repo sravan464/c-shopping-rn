@@ -1,5 +1,4 @@
-import { Fragment, useState } from 'react'
-import { Control, useController } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { View } from 'react-native'
 import RNPickerSelect from 'react-native-picker-select'
 
@@ -34,3 +33,4 @@ const Combobox = props => {
 }
 
 export default Combobox
+

@@ -5,13 +5,14 @@ import BigLoading from '../loading/BigLoading'
 import { useUserInfo } from '@/hooks'
 
 export default function AuthMustWrapper({ children }) {
-  const { userInfo, isVerify, isLoading } = useUserInfo()
+  const { userInfo, isVerified, isLoading } = useUserInfo()
 
   //? Render(s)
   if (isLoading) return <BigLoading />
-  if (!isVerify || !userInfo) {
+  if (!isVerified || !userInfo) {
     router.replace('/login')
     return null
   }
-  if (isVerify && userInfo) return <>{children}</>
+  if (isVerified && userInfo) return <>{children}</>
 }
+

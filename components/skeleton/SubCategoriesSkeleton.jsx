@@ -1,4 +1,4 @@
-import { ScrollView, View } from 'react-native'
+import { ScrollView } from 'react-native'
 
 import Skeleton from '../common/Skeleton'
 
@@ -27,3 +27,4 @@ export default function SubCategoriesSkeleton() {
     </>
   )
 }
+

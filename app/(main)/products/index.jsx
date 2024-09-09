@@ -1,6 +1,6 @@
 import { FlashList } from '@shopify/flash-list'
 import { Stack, useLocalSearchParams } from 'expo-router'
-import { View, Text } from 'react-native'
+import { Text, View } from 'react-native'
 
 import { Filter, ProductCard, ProductSkeleton, Sort, SubCategories } from '@/components'
 import { useChangeRoute } from '@/hooks'
@@ -11,7 +11,7 @@ export default function ProductsScreen() {
   const params = useLocalSearchParams()
 
   const category = params?.category?.toString() ?? ''
-  const page_size = params?.page_size?.toString() ?? 10
+  const pageSize = params?.pageSize?.toString() ?? 10
   const page = params?.page?.toString() ?? 1
   const sort = params?.sort?.toString() ?? ''
   const search = params?.search?.toString() ?? ''
@@ -29,7 +29,7 @@ export default function ProductsScreen() {
   } = useGetProductsQuery(
     {
       category,
-      page_size,
+      pageSize,
       page,
       sort,
       search,
@@ -106,10 +106,10 @@ export default function ProductsScreen() {
               </View>
 
               <View className="flex flex-row justify-between py-2">
-                <Text className="text-base text-neutral-600">所有商品</Text>
+                <Text className="text-base text-neutral-600">All Products</Text>
 
                 <Text className="text-base text-neutral-600">
-                  {data?.data?.productsLength} 件商品
+                  {data?.data?.productsLength} pieces of product
                 </Text>
               </View>
             </View>
@@ -124,7 +124,7 @@ export default function ProductsScreen() {
                 estimatedItemSize={200}
               />
             ) : (
-              <Text className="text-center text-red-500">没有找到商品</Text>
+              <Text className="text-center text-red-500">No product found</Text>
             )}
           </View>
         </View>
@@ -132,3 +132,4 @@ export default function ProductsScreen() {
     </>
   )
 }
+

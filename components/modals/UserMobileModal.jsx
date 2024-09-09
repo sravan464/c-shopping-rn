@@ -53,11 +53,11 @@ const UserMobileModal = props => {
           onClose={onClose}
           className="flex flex-col px-5 py-3 bg-white rounded-lg gap-y-5 "
         >
-          <Modal.Header onClose={onClose}>手机号码记录及编辑</Modal.Header>
+          <Modal.Header onClose={onClose}>Edit Mobile Number</Modal.Header>
           <Modal.Body>
             <View className="flex flex-col justify-between">
               <TextField
-                label="电话号码"
+                label="Mobile Number"
                 control={control}
                 errors={formErrors.mobile}
                 name="mobile"
@@ -66,7 +66,7 @@ const UserMobileModal = props => {
 
               <View className="py-3 border-t-2 border-gray-200 lg:pb-0 ">
                 <SubmitModalBtn onPress={handleSubmit(submitHander)} isLoading={isLoading}>
-                  确认
+                  Confirm
                 </SubmitModalBtn>
               </View>
             </View>
@@ -78,3 +78,4 @@ const UserMobileModal = props => {
 }
 
 export default UserMobileModal
+

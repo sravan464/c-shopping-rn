@@ -2,7 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 
 const Skeleton = props => {
-  //? Porps
+  //? Props
   const { count, children } = props
 
   //? Assets
@@ -45,13 +45,12 @@ export const Item = ({ index, height, width, animated, style, children }) => {
   return (
     <View
       key={index}
-      className={` ${height} ${width} ${
-        animated === 'background'
-          ? 'animate-pulse bg-red-200'
+      className={` ${height} ${width} ${animated === 'background'
+          ? 'animate-pulse bg-gray-200'
           : animated === 'border'
-            ? 'animate-pulse border-2 border-red-200'
+            ? 'animate-pulse border-2 border-gray-200'
             : 'bg-white'
-      } rounded-md`}
+        } rounded-md`}
       style={style}
     >
       {children}
@@ -66,3 +65,4 @@ const _default = Object.assign(Skeleton, {
 })
 
 export default _default
+

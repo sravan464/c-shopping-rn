@@ -7,9 +7,9 @@ import {
   BestSellsSlider,
   Categories,
   DiscountSlider,
+  FeedHeader,
   Slider as MainSlider,
   MostFavouraiteProducts,
-  FeedHeader,
   ShowWrapper,
 } from '@/components'
 import { useGetFeedInfoQuery } from '@/services'
@@ -56,7 +56,7 @@ export default function FeedScreen() {
           <>
             <MainSlider data={sliders} />
             <Categories
-              childCategories={{ categories: childCategories, title: '所有分类' }}
+              childCategories={{ categories: childCategories, title: 'All Categories' }}
               color={currentCategory?.colors?.start}
               name={currentCategory?.name}
               homePage
@@ -72,3 +72,4 @@ export default function FeedScreen() {
     </>
   )
 }
+

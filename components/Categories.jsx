@@ -1,6 +1,5 @@
 import { FlashList } from '@shopify/flash-list'
 import { Link } from 'expo-router'
-import React from 'react'
 import { Image, Pressable, Text, View } from 'react-native'
 
 import FeedSectionContainer from './common/FeedSectionContainer'
@@ -12,7 +11,7 @@ export default function Categories(props) {
   //? Re-Renders
   if (childCategories.categories.length > 0 && color && name) {
     return (
-      <FeedSectionContainer title="分类">
+      <FeedSectionContainer title="Categories">
         <FlashList
           data={childCategories.categories}
           horizontal
@@ -46,3 +45,4 @@ export default function Categories(props) {
   }
   return null
 }
+

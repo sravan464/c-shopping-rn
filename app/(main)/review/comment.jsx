@@ -1,11 +1,11 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import Slider from '@react-native-community/slider'
 import { nanoid } from '@reduxjs/toolkit'
-import { useLocalSearchParams, router } from 'expo-router'
+import { router, useLocalSearchParams } from 'expo-router'
 import Stack from 'expo-router/stack'
 import { useState } from 'react'
-import { useForm, useFieldArray } from 'react-hook-form'
-import { View, Text, ScrollView, Pressable, TextInput } from 'react-native'
+import { useFieldArray, useForm } from 'react-hook-form'
+import { Pressable, ScrollView, Text, TextInput, View } from 'react-native'
 
 import { HandleResponse, Icons, SubmitModalBtn, TextField } from '@/components'
 import { useCreateReviewMutation } from '@/services'
@@ -86,7 +86,7 @@ export default function ReviewCommentScreen() {
     <>
       <Stack.Screen
         options={{
-          title: `填写评价，${productTitle}`,
+          title: `Write a review for ${productTitle}`,
           headerBackTitleVisible: false,
         }}
       />
@@ -102,7 +102,7 @@ export default function ReviewCommentScreen() {
             setRating(1)
             router.back()
           }}
-          onError={() => {}}
+          onError={() => { }}
         />
       )}
       <ScrollView className="bg-white">
@@ -111,7 +111,7 @@ export default function ReviewCommentScreen() {
             {/* rating */}
             <View>
               <View className="my-2 flex flex-row justify-center text-center">
-                <Text className="text-sm text-black">评分!:‌</Text>
+                <Text className="text-sm text-black">Rating: </Text>
                 <Text className="px-1 text-sm text-sky-500">{ratingStatus[rating]}</Text>
               </View>
               <Slider
@@ -138,7 +138,7 @@ export default function ReviewCommentScreen() {
             {/* title */}
             <View>
               <TextField
-                label="评价标题"
+                label="Review title"
                 control={control}
                 errors={formErrors.title}
                 name="title"
@@ -148,7 +148,7 @@ export default function ReviewCommentScreen() {
             {/* positivePoints */}
             <View className="space-y-3">
               <View className="space-y-3">
-                <Text className="text-xs text-gray-700">优点</Text>
+                <Text className="text-xs text-gray-700">Advantages</Text>
                 <View className="flex flex-row items-center input w-full px-3 py-2.5 transition-colors border border-gray-200 rounded-md outline-none bg-zinc-50/30 focus:border-blue-600 leading-none">
                   <TextInput
                     className=" flex-auto"
@@ -188,7 +188,7 @@ export default function ReviewCommentScreen() {
             {/* negativePoints */}
             <View className="space-y-3">
               <View className="space-y-3">
-                <Text className="text-xs text-gray-700">缺点</Text>
+                <Text className="text-xs text-gray-700">Disadvantages</Text>
                 <View className="flex flex-row items-center input w-full px-3 py-2.5 transition-colors border border-gray-200 rounded-md outline-none bg-zinc-50/30 focus:border-blue-600 leading-none">
                   <TextInput
                     className=" flex-auto"
@@ -201,7 +201,7 @@ export default function ReviewCommentScreen() {
                     }}
                   />
                   <Pressable onPress={handleAddNegativePoint}>
-                    <Icons.AntDesign size={16} name="plus" className="icon" />
+                    <Icons.AntDesign size={16} name="minus" className="text-red-500 icon" />
                   </Pressable>
                 </View>
               </View>
@@ -228,7 +228,7 @@ export default function ReviewCommentScreen() {
             {/* comment */}
             <View>
               <TextField
-                label="评价文字"
+                label="Review text"
                 control={control}
                 errors={formErrors.comment}
                 name="comment"
@@ -236,7 +236,7 @@ export default function ReviewCommentScreen() {
             </View>
             <View className="py-3">
               <SubmitModalBtn onPress={handleSubmit(submitHander)} isLoading={isLoading}>
-                提交评价
+                Submit Review
               </SubmitModalBtn>
             </View>
           </View>
@@ -245,3 +245,4 @@ export default function ReviewCommentScreen() {
     </>
   )
 }
+

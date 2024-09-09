@@ -2,9 +2,8 @@ import { FlashList } from '@shopify/flash-list'
 import { Stack } from 'expo-router'
 import { useState } from 'react'
 import { View } from 'react-native'
-import { ScrollView } from 'react-native-gesture-handler'
 
-import { OrderCard, ShowWrapper, EmptyOrdersList, OrderSkeleton } from '@/components'
+import { EmptyOrdersList, OrderCard, OrderSkeleton, ShowWrapper } from '@/components'
 import { useGetOrdersQuery } from '@/services'
 
 const OrdersScreen = () => {
@@ -40,7 +39,7 @@ const OrdersScreen = () => {
     <>
       <Stack.Screen
         options={{
-          title: '我的订单',
+          title: 'My Orders',
           headerBackTitleVisible: false,
         }}
       />
@@ -71,3 +70,4 @@ const OrdersScreen = () => {
   )
 }
 export default OrdersScreen
+

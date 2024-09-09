@@ -1,5 +1,5 @@
 import { Link, Stack } from 'expo-router'
-import { View, Text, ScrollView } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import { AuthWrapper, BoxLink, Icons, Logout, Person } from '@/components'
@@ -12,37 +12,37 @@ export default function ProfileScreen() {
 
   const profilePaths = [
     {
-      name: '我的订单',
+      name: 'My Orders',
       Icon: Icons.SimpleLineIcons,
       IconName: 'handbag',
       path: '/profile/orders',
     },
     {
-      name: '我的收藏',
+      name: 'My Favorites',
       Icon: Icons.Feather,
       IconName: 'heart',
       path: '/profile/lists',
     },
     {
-      name: '我的评价',
+      name: 'My Reviews',
       Icon: Icons.FontAwesome5,
       IconName: 'comment',
       path: '/profile/reviews',
     },
     {
-      name: '地址管理',
+      name: 'Address Management',
       Icon: Icons.MaterialIcons,
       IconName: 'location-city',
       path: '/profile/addresses',
     },
     {
-      name: '最近访问',
+      name: 'Recent Visits',
       Icon: Icons.AntDesign,
       IconName: 'clockcircleo',
       path: '/profile/user-history',
     },
     {
-      name: '账户信息',
+      name: 'Account Information',
       Icon: Icons.AntDesign,
       IconName: 'user',
       path: '/profile/personal-info',
@@ -57,7 +57,7 @@ export default function ProfileScreen() {
           headerShown: false,
         }}
       />
-      <AuthWrapper tips="享受购物">
+      <AuthWrapper tips="Enjoy shopping">
         <ScrollView className="bg-white">
           <View style={{ paddingTop: insets.top + 60 }} className="flex bg-white">
             <View className="flex flex-row items-center px-4">
@@ -99,3 +99,4 @@ export default function ProfileScreen() {
     </>
   )
 }
+

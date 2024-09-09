@@ -26,7 +26,8 @@ export const LoginBtn = ({ children, ...restPropps }) => (
 )
 
 export const SubmitModalBtn = ({ children, ...restPropps }) => (
-  <Button className="w-full max-w-xl mx-auto rounded-md btn lg:w-64 lg:ml-0" {...restPropps}>
+  <Button className="w-full max-w-xl mx-auto rounded-md submit-btn lg:w-64 lg:ml-0" {...restPropps}>
     {children}
   </Button>
 )
+

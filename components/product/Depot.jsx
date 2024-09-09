@@ -7,7 +7,7 @@ import { formatNumber } from '@/utils'
 const Depot = ({ inStock }) => {
   //? Render(s)
   if (inStock < 10 && inStock !== 0) {
-    return <Text className="text-red-500">库存仅剩{formatNumber(inStock)}</Text>
+    return <Text className="text-red-500">Only {formatNumber(inStock)} in stock</Text>
   } else if (inStock > 10) {
     return (
       <View className="flex flex-row items-center text-teal-400 gap-x-1">
@@ -21,3 +21,4 @@ const Depot = ({ inStock }) => {
 }
 
 export default Depot
+

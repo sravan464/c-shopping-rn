@@ -1,9 +1,9 @@
 import { FlashList } from '@shopify/flash-list'
 import { Stack } from 'expo-router'
 import { useState } from 'react'
-import { ScrollView, View } from 'react-native'
+import { View } from 'react-native'
 
-import { ReveiwCard, ShowWrapper, EmptyCommentsList, ReveiwSkeleton } from '@/components'
+import { EmptyReviewsList, ReviewCard, ReviewSkeleton, ShowWrapper } from '@/components'
 import { useGetReviewsQuery } from '@/services'
 
 const ReviewsScreen = () => {
@@ -39,7 +39,7 @@ const ReviewsScreen = () => {
     <>
       <Stack.Screen
         options={{
-          title: '我的评论',
+          title: 'My Reviews',
           headerBackTitleVisible: false,
         }}
       />
@@ -51,14 +51,14 @@ const ReviewsScreen = () => {
           isFetching={isFetching}
           isSuccess={isSuccess}
           dataLength={data ? data?.data?.reviewsLength : 0}
-          emptyComponent={<EmptyCommentsList />}
-          loadingComponent={<ReveiwSkeleton />}
+          emptyComponent={<EmptyReviewsList />}
+          loadingComponent={<ReviewSkeleton />}
           originalArgs={originalArgs}
         >
           <View className="px-4 py-3 space-y-3 h-full">
             <FlashList
               data={data?.data?.reviews}
-              renderItem={({ item, index }) => <ReveiwCard key={item._id} item={item} />}
+              renderItem={({ item, index }) => <ReviewCard key={item._id} item={item} />}
               onEndReached={onEndReachedThreshold}
               onEndReachedThreshold={0}
               estimatedItemSize={200}
@@ -71,3 +71,4 @@ const ReviewsScreen = () => {
 }
 
 export default ReviewsScreen
+

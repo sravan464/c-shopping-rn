@@ -11,9 +11,8 @@ const ReviewProductCard = props => {
   return (
     <View className="flex flex-row py-3">
       <Text
-        className={`w-5 h-5 text-center pt-0.5 inline-block rounded-md text-white  ${
-          item.rating <= 2 ? 'bg-red-500' : item.rating === 3 ? 'bg-amber-500' : 'bg-green-500'
-        }`}
+        className={`w-5 h-5 text-center pt-0.5 inline-block rounded-md text-white  ${item.rating <= 2 ? 'bg-red-500' : item.rating === 3 ? 'bg-amber-500' : 'bg-green-500'
+          }`}
       >
         {item.rating}
       </Text>

@@ -9,14 +9,14 @@ const WithAddressModal = props => {
 
   const [isShowAddressModal, addressModalHandlers] = useDisclosure()
 
-  const { userInfo, isVerify, isLoading } = useUserInfo()
+  const { userInfo, isVerified, isLoading } = useUserInfo()
 
   const addressModalProps = {
     openAddressModal: addressModalHandlers.open,
     address: userInfo?.address ?? {},
     isLoading,
-    isVerify,
-    isAddress: !!userInfo?.address,
+    isVerified,
+    hasAddress: !!userInfo?.address,
   }
 
   return (
@@ -24,12 +24,12 @@ const WithAddressModal = props => {
       {React.Children.map(children, child =>
         React.isValidElement(child)
           ? React.cloneElement(child, {
-              addressModalProps,
-            })
+            addressModalProps,
+          })
           : child
       )}
 
-      {!isVerify ? null : !isLoading ? (
+      {!isVerified ? null : !isLoading ? (
         <AddressModal
           isShow={isShowAddressModal}
           onClose={addressModalHandlers.close}
@@ -41,3 +41,4 @@ const WithAddressModal = props => {
 }
 
 export default WithAddressModal
+

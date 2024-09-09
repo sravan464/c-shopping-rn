@@ -8,8 +8,9 @@ export default function EmptyCustomList() {
         className="w-[50vw] aspect-square"
       />
       <View className="px-4 space-y-2 flex items-center justify-center">
-        <Text className="text-sm">数据还没准备好呢</Text>
+        <Text className="text-sm">The data is not ready yet</Text>
       </View>
     </View>
   )
 }
+

@@ -1,14 +1,14 @@
 import {
-  Feather,
-  FontAwesome5,
-  Ionicons,
-  EvilIcons,
-  MaterialIcons,
   AntDesign,
-  SimpleLineIcons,
-  FontAwesome,
   Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome,
+  FontAwesome5,
   FontAwesome6,
+  Ionicons,
+  MaterialCommunityIcons,
+  SimpleLineIcons,
 } from '@expo/vector-icons'
 
 const Icons = {
@@ -17,11 +17,12 @@ const Icons = {
   FontAwesome5,
   Ionicons,
   EvilIcons,
-  MaterialIcons,
-  FontAwesome6,
+  MaterialCommunityIcons,
   AntDesign,
   SimpleLineIcons,
   Entypo,
+  FontAwesome6,
 }
 
 export default Icons
+

@@ -5,17 +5,22 @@ import ReactNativeModal from 'react-native-modal'
 import Icons from './Icons'
 
 const Modal = props => {
-  //? Porps
-  const { isShow, onClose, closeOnClickOverlay, effect, children, ...restProps } = props
+  //? Props
+  const { isVisible, onClose, closeOnClickOverlay, animationType, children, ...restProps } = props
 
-  //? Handers
+  //? Handlers
   const handleBackdropPress = () => {
     closeOnClickOverlay && onClose()
   }
 
   //? Render(s)
   return (
-    <ReactNativeModal isVisible={isShow} onBackdropPress={handleBackdropPress} {...restProps}>
+    <ReactNativeModal
+      isVisible={isVisible}
+      onBackdropPress={handleBackdropPress}
+      animationType={animationType}
+      {...restProps}
+    >
       {React.Children.map(children, child => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { onClose })
@@ -47,12 +52,12 @@ const Content = props => {
 
 const Header = props => {
   //? Props
-  const { onClose, children } = props
+  const { onClose, title } = props
 
   //? Render(s)
   return (
     <View className="flex flex-row items-center justify-between pb-2 border-b-2 border-gray-200 mb-2">
-      <Text className="text-sm">{children}</Text>
+      <Text className="text-sm">{title}</Text>
       <Pressable onPress={onClose} className="p-1">
         <Icons.AntDesign name="close" size={16} className="icon" />
       </Pressable>
@@ -72,3 +77,4 @@ const _default = Object.assign(Modal, {
 })
 
 export default _default
+

@@ -38,7 +38,7 @@ const AddToCartOperation = props => {
       if (product.inStock === 0)
         return Toast.show({
           type: 'error',
-          text2: '此商品缺货',
+          text2: 'This product is out of stock',
         })
 
       dispatch(
@@ -69,7 +69,7 @@ const AddToCartOperation = props => {
         </View>
       ) : (
         <Button onPress={handleAddItem} className="px-12 text-sm btn">
-          添加到购物车
+          Add to cart
         </Button>
       )}
 
@@ -86,3 +86,4 @@ const AddToCartOperation = props => {
 }
 
 export default AddToCartOperation
+

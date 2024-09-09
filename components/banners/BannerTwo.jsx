@@ -1,5 +1,5 @@
 import { FlashList } from '@shopify/flash-list'
-import { View, Image } from 'react-native'
+import { Image, View } from 'react-native'
 
 import FeedSectionContainer from '../common/FeedSectionContainer'
 
@@ -11,7 +11,7 @@ export default function BannerTwo(props) {
   if (data.length === 0) return null
 
   return (
-    <FeedSectionContainer title="推荐专题">
+    <FeedSectionContainer title="Recommended Topics">
       <FlashList
         data={data}
         renderItem={({ item, index }) => (
@@ -31,3 +31,4 @@ export default function BannerTwo(props) {
     </FeedSectionContainer>
   )
 }
+

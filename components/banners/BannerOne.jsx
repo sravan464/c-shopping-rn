@@ -1,4 +1,4 @@
-import { View, Image } from 'react-native'
+import { Image, View } from 'react-native'
 
 import FeedSectionContainer from '../common/FeedSectionContainer'
 
@@ -9,7 +9,7 @@ export default function BannerOne(props) {
   //? Render(s)
   if (data.length === 0) return null
   return (
-    <FeedSectionContainer title="今日专题">
+    <FeedSectionContainer title="Today's Special">
       <View className="w-full flex flex-row flex-wrap">
         {data.map((item, index) => (
           <View
@@ -29,3 +29,4 @@ export default function BannerOne(props) {
     </FeedSectionContainer>
   )
 }
+

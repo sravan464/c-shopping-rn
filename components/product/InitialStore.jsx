@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 import { useAppDispatch } from '@/hooks'
-import { setTempColor, setTempSize, addToLastSeen } from '@/store'
+import { addToLastSeen, setTempColor, setTempSize } from '@/store'
 
 const InitialStore = props => {
   const { product } = props
@@ -33,3 +33,4 @@ const InitialStore = props => {
 }
 
 export default InitialStore
+

@@ -15,7 +15,7 @@ const UserHistoryScreen = () => {
     <>
       <Stack.Screen
         options={{
-          title: '最近访问',
+          title: 'Recently Viewed',
           headerBackTitleVisible: false,
         }}
       />
@@ -43,7 +43,7 @@ const UserHistoryScreen = () => {
       ) : (
         <View className="py-20">
           <EmptyCart className="mx-auto h-52 w-52" />
-          <Text className="text-center">您的最近访问列表为空</Text>
+          <Text className="text-center">Your recently viewed list is empty</Text>
         </View>
       )}
     </>
@@ -51,3 +51,4 @@ const UserHistoryScreen = () => {
 }
 
 export default UserHistoryScreen
+

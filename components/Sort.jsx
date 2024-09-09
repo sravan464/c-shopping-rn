@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from 'expo-router'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Pressable, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
@@ -57,7 +57,7 @@ const Sort = ({ handleChangeRoute }) => {
             style={{ paddingTop: insets.top }}
             className="flex flex-col h-[100vh] w-[80vw] px-5 ml-[15vw] bg-white"
           >
-            <Modal.Header onClose={sortHandlers.close}>排序</Modal.Header>
+            <Modal.Header onClose={sortHandlers.close}>Sort</Modal.Header>
             <Modal.Body>
               <View className="divide-y divide-neutral-300">
                 {sorts.map((item, i) => (
@@ -84,3 +84,4 @@ const Sort = ({ handleChangeRoute }) => {
 }
 
 export default Sort
+

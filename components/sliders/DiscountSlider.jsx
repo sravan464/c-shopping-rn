@@ -1,6 +1,6 @@
 import { FlashList } from '@shopify/flash-list'
 import { Link, router } from 'expo-router'
-import { View, Image, Pressable, TouchableOpacity } from 'react-native'
+import { Image, TouchableOpacity, View } from 'react-native'
 
 import FeedSectionContainer from '../common/FeedSectionContainer'
 import Skeleton from '../common/Skeleton'
@@ -36,7 +36,7 @@ export default function DiscountSlider(props) {
 
   //? Render(s)
   return (
-    <FeedSectionContainer title="折扣商品" showMore onJumptoMore={handleJumptoMore}>
+    <FeedSectionContainer title="Discounted Products" showMore onJumptoMore={handleJumptoMore}>
       {isLoading ? (
         <FlashList
           data={Array(10).fill('_')}
@@ -101,3 +101,4 @@ export default function DiscountSlider(props) {
     </FeedSectionContainer>
   )
 }
+

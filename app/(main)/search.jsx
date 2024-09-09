@@ -1,7 +1,7 @@
 import { FlashList } from '@shopify/flash-list'
 import { Link, Stack } from 'expo-router'
 import { useState } from 'react'
-import { View, Text, Pressable, TextInput } from 'react-native'
+import { Pressable, Text, TextInput, View } from 'react-native'
 
 import {
   DiscountProduct,
@@ -15,7 +15,7 @@ import { useDebounce } from '@/hooks'
 import { useGetProductsQuery } from '@/services'
 import { truncate } from '@/utils'
 
-export default function SerachScreen() {
+export default function SearchScreen() {
   //? Props
 
   //? States
@@ -65,7 +65,7 @@ export default function SerachScreen() {
     <>
       <Stack.Screen
         options={{
-          title: '搜索',
+          title: 'Search',
           headerBackTitleVisible: false,
         }}
       />
@@ -137,3 +137,4 @@ export default function SerachScreen() {
     </>
   )
 }
+

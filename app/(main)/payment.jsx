@@ -1,6 +1,6 @@
 import { Link, Stack, router } from 'expo-router'
 import { useState } from 'react'
-import { View, Text, ScrollView, Pressable, Image } from 'react-native'
+import { Image, Pressable, ScrollView, Text, View } from 'react-native'
 import { RadioButton } from 'react-native-paper'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Toast from 'react-native-toast-message'
@@ -28,7 +28,7 @@ export default function PaymentScreen() {
   const { userInfo } = useUserInfo()
 
   //? States
-  const [paymentMethod, setPaymentMethod] = useState('在线支付')
+  const [paymentMethod, setPaymentMethod] = useState('Online Payment')
 
   //? Store
   const { cartItems, totalItems, totalDiscount, totalPrice } = useAppSelector(state => state.cart)
@@ -47,7 +47,7 @@ export default function PaymentScreen() {
     )
       return Toast.show({
         type: 'error',
-        text2: '请填写您的地址',
+        text2: 'Please fill in your address',
       })
     else
       postData({
@@ -91,7 +91,7 @@ export default function PaymentScreen() {
     <>
       <Stack.Screen
         options={{
-          title: `填写订单`,
+          title: `Fill in the order`,
           headerBackTitleVisible: false,
         }}
       />
@@ -122,7 +122,7 @@ export default function PaymentScreen() {
                         size={18}
                         className="text-red-300 icon"
                       />
-                      <Text className="font-normal text-red-300">购物车</Text>
+                      <Text className="font-normal text-red-300">Shopping Cart</Text>
                     </Pressable>
                   </Link>
 
@@ -133,7 +133,7 @@ export default function PaymentScreen() {
                       size={16}
                       className="w-6 h-6 text-red-500 icon"
                     />
-                    <Text className="text-base font-normal text-red-500">付款方式</Text>
+                    <Text className="text-base font-normal text-red-500">Payment Method</Text>
                   </View>
                 </View>
               </View>
@@ -149,7 +149,7 @@ export default function PaymentScreen() {
                     <Text className="text-sm text-neutral-600">{userInfo?.name}</Text>
                   </View>
                 ) : (
-                  <Text className="text-black">填写地址</Text>
+                  <Text className="text-black">Fill in the address</Text>
                 )}
                 <ChangeAddress />
               </View>
@@ -166,11 +166,11 @@ export default function PaymentScreen() {
                     alt="icon"
                   />
                   <View>
-                    <Text className="text-base text-black">正常发货</Text>
-                    <Text className="block text-neutral-600">有现货</Text>
+                    <Text className="text-base text-black">Normal Shipping</Text>
+                    <Text className="block text-neutral-600">In Stock</Text>
                   </View>
                   <View className="inline-block px-2 py-1 ml-3 bg-gray-100 rounded-lg h-auto">
-                    <Text className="text-neutral-600">{formatNumber(totalItems)} 件商品</Text>
+                    <Text className="text-neutral-600">{formatNumber(totalItems)} Items</Text>
                   </View>
                 </View>
                 <View className="flex flex-row flex-wrap justify-start gap-x-8 gap-y-5">
@@ -204,7 +204,7 @@ export default function PaymentScreen() {
                 </View>
 
                 <Link href="/checkout/cart" className="inline-block mt-6 text-sm text-sky-500">
-                  返回购物车
+                  Return to Cart
                 </Link>
               </View>
 
@@ -218,8 +218,8 @@ export default function PaymentScreen() {
                     onValueChange={value => setPaymentMethod(value)}
                     value={paymentMethod}
                   >
-                    <RadioButton.Item label="在线支付" value="在线支付" />
-                    <RadioButton.Item label="银行卡" value="银行卡" />
+                    <RadioButton.Item label="Online Payment" value="Online Payment" />
+                    <RadioButton.Item label="Bank Card" value="Bank Card" />
                   </RadioButton.Group>
                 </View>
               </View>
@@ -234,7 +234,7 @@ export default function PaymentScreen() {
               isLoading={isLoading}
               className="w-full max-w-5xl mx-auto"
             >
-              完成购买
+              Complete Purchase
             </Button>
           </View>
         </View>
@@ -242,3 +242,4 @@ export default function PaymentScreen() {
     </>
   )
 }
+

@@ -48,7 +48,7 @@ const PersonalInfoScreen = () => {
     <>
       <Stack.Screen
         options={{
-          title: '帐户信息',
+          title: 'Account Information',
           headerBackTitleVisible: false,
         }}
       />
@@ -68,13 +68,13 @@ const PersonalInfoScreen = () => {
       )}
       <View className="h-full bg-white">
         <InfoField
-          label="名字和姓氏"
+          label="Name and Surname"
           info={userInfo?.name}
           editHandler={nameModalHandlers.open}
           isLoading={isLoading}
         />
         <InfoField
-          label="电话号码"
+          label="Phone Number"
           info={userInfo?.mobile}
           editHandler={phoneModalHandlers.open}
           isLoading={isLoading}
@@ -85,3 +85,4 @@ const PersonalInfoScreen = () => {
 }
 
 export default PersonalInfoScreen
+

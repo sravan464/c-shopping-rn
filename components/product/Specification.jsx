@@ -21,7 +21,7 @@ const Specification = props => {
   return (
     <View className="px-4 pt-4">
       <View className="lg:max-w-3xl xl:max-w-5xl">
-        <Text className="mb-3 h-fit w-fit">规格</Text>
+        <Text className="mb-3 h-fit w-fit">Specification</Text>
 
         <View className="l">
           <View className="space-y-4">
@@ -47,9 +47,9 @@ const Specification = props => {
               onPress={showSpecHandlers.toggle}
             >
               {isShowSpec ? (
-                <Text className="text-sm text-sky-400">收起</Text>
+                <Text className="text-sm text-sky-400">Collapse</Text>
               ) : (
-                <Text className="text-sm text-sky-400">查看更多</Text>
+                <Text className="text-sm text-sky-400">View More</Text>
               )}
               {!isShowSpec && (
                 <Icons.MaterialIcons
@@ -67,3 +67,4 @@ const Specification = props => {
 }
 
 export default Specification
+

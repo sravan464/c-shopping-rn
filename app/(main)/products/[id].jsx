@@ -1,5 +1,5 @@
 import { Link, Stack, useLocalSearchParams, useRouter } from 'expo-router'
-import { View, Text, ScrollView, Pressable } from 'react-native'
+import { Pressable, ScrollView, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import {
@@ -150,3 +150,4 @@ export default function SingleProductScreen() {
     </>
   )
 }
+

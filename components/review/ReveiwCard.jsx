@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { Text, View } from 'react-native'
 
 import Icons from '../common/Icons'
@@ -30,9 +30,8 @@ const ReveiwCard = props => {
           />
 
           <View
-            className={`w-5 h-5 text-center pt-0.5 inline-block rounded-md ml-10 mt-2  ${
-              item.rating <= 2 ? 'bg-red-500' : item.rating === 3 ? 'bg-amber-500' : 'bg-green-500'
-            }`}
+            className={`w-5 h-5 text-center pt-0.5 inline-block rounded-md ml-10 mt-2  ${item.rating <= 2 ? 'bg-red-500' : item.rating === 3 ? 'bg-amber-500' : 'bg-green-500'
+              }`}
           >
             <Text className="text-white text-center">{item.rating}</Text>
           </View>
@@ -44,9 +43,8 @@ const ReveiwCard = props => {
             <Text className="pt-2">{item.title}</Text>
             <View className="flex flex-row items-center justify-between">
               <View
-                className={`flex flex-row w-fit items-center p-1 rounded-md ${
-                  status === 1 ? 'bg-amber-100 ' : status === 2 ? 'bg-green-100 ' : 'bg-red-100 '
-                } `}
+                className={`flex flex-row w-fit items-center p-1 rounded-md ${status === 1 ? 'bg-amber-100 ' : status === 2 ? 'bg-green-100 ' : 'bg-red-100 '
+                  } `}
               >
                 {status === 1 ? (
                   <View className="bg-amber-500 rounded-full p-0.5 icon">
@@ -62,15 +60,14 @@ const ReveiwCard = props => {
                   </View>
                 )}
                 <Text
-                  className={`ml-2 ${
-                    status === 1
+                  className={`ml-2 ${status === 1
                       ? 'text-amber-500'
                       : status === 2
                         ? 'text-green-500'
                         : 'text-red-500'
-                  }`}
+                    }`}
                 >
-                  {status === 1 ? '等待确认' : status === 2 ? '已经确认' : '不见了'}
+                  {status === 1 ? 'Waiting for confirmation' : status === 2 ? 'Confirmed' : 'Deleted'}
                 </Text>
               </View>
               <Icons.Feather name="more-vertical" size={18} />
@@ -104,3 +101,4 @@ const ReveiwCard = props => {
 }
 
 export default ReveiwCard
+

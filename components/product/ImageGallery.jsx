@@ -4,7 +4,7 @@ import Swiper from 'react-native-swiper'
 import ResponsiveImage from '../common/ResponsiveImage'
 
 const ImageGallery = props => {
-  //? Porps
+  //? Props
   const { images, productName } = props
 
   //? Render(s)
@@ -26,3 +26,4 @@ const ImageGallery = props => {
 }
 
 export default ImageGallery
+

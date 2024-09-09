@@ -15,7 +15,7 @@ export default function Logout() {
     dispatch(userLogout())
     Toast.show({
       type: 'success',
-      text2: '已退出登录',
+      text2: 'Logged out',
     })
   }
 
@@ -25,8 +25,9 @@ export default function Logout() {
       className="flex flex-row justify-between items-center transition-colors py-4 text-xs text-gray-700 w-full"
       onPress={handleLogout}
     >
-      <Text className="text-gray-700">退出</Text>
+      <Text className="text-gray-700">Log out</Text>
       <Icons.MaterialIcons name="logout" size={24} className="text-gray-700" />
     </TouchableOpacity>
   )
 }
+

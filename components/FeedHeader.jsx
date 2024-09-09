@@ -50,7 +50,8 @@ export default function FeedHeader() {
           </Pressable>
         </View>
       </View>
-      <Search />
+      <Search placeholder="Search for products" />
     </View>
   )
 }
+

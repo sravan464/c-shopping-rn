@@ -96,9 +96,9 @@ const AddressModal = props => {
           style={{ paddingTop: insets.top }}
           className="flex flex-col w-[100vw] h-[100vh] m-0 px-5 py-3 bg-white"
         >
-          <Modal.Header onClose={onClose}>地址管理</Modal.Header>
+          <Modal.Header onClose={onClose}>Manage Address</Modal.Header>
           <Modal.Body>
-            <Text>请输入您的收货地址</Text>
+            <Text>Please enter your shipping address</Text>
             <View className="flex flex-col justify-between flex-1 mt-4 overflow-y-auto">
               <View className="space-y-2">
                 <View className="space-y-2">
@@ -106,7 +106,7 @@ const AddressModal = props => {
                     control={control}
                     name="province"
                     list={AllProvinces}
-                    placeholder="请选择您所在的省份"
+                    placeholder="Select your province"
                   />
                   <DisplayError errors={formErrors.province?.name} />
                 </View>
@@ -116,7 +116,7 @@ const AddressModal = props => {
                     control={control}
                     name="city"
                     list={cities}
-                    placeholder="请选择您所在的城市"
+                    placeholder="Select your city"
                   />
                   <DisplayError errors={formErrors.city?.name} />
                 </View>
@@ -126,20 +126,20 @@ const AddressModal = props => {
                     control={control}
                     name="area"
                     list={areas}
-                    placeholder="请选择您所在的区县"
+                    placeholder="Select your district"
                   />
                   <DisplayError errors={formErrors.area?.name} />
                 </View>
 
                 <TextField
-                  label="街道信息"
+                  label="Street information"
                   control={control}
                   errors={formErrors.street}
                   name="street"
                 />
 
                 <TextField
-                  label="邮政编码"
+                  label="Postal code"
                   control={control}
                   errors={formErrors.postalCode}
                   name="postalCode"
@@ -155,7 +155,7 @@ const AddressModal = props => {
                   className="ml-auto"
                   onPress={handleSubmit(submitHander)}
                 >
-                  确定
+                  Confirm
                 </SubmitModalBtn>
               </View>
             </View>
@@ -167,3 +167,4 @@ const AddressModal = props => {
 }
 
 export default AddressModal
+

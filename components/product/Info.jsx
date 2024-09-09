@@ -7,7 +7,7 @@ const Info = props => {
   //? Render(s)
   return (
     <View className="px-4 pb-2">
-      <Text className="py-3">属性</Text>
+      <Text className="py-3">Attributes</Text>
       <View className="ml-1 gap-y-2">
         {infos.map((item, i) => (
           <View key={i} className="flex flex-row gap-x-2 tracking-wide text-gray-500">
@@ -21,3 +21,4 @@ const Info = props => {
 }
 
 export default Info
+

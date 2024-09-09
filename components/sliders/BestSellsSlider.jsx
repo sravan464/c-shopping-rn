@@ -1,6 +1,6 @@
 import { FlashList } from '@shopify/flash-list'
 import { Link } from 'expo-router'
-import { View, Text, Image, Pressable } from 'react-native'
+import { Image, Pressable, Text, View } from 'react-native'
 
 import FeedSectionContainer from '../common/FeedSectionContainer'
 import Skeleton from '../common/Skeleton'
@@ -37,7 +37,7 @@ export default function BestSellsSlider(props) {
   //? Render(s)
 
   return (
-    <FeedSectionContainer title="畅销商品">
+    <FeedSectionContainer title="Best Selling">
       {isLoading ? (
         Array(2)
           .fill('_')
@@ -92,3 +92,4 @@ export default function BestSellsSlider(props) {
     </FeedSectionContainer>
   )
 }
+
